@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers : localhost:9092
+
+    topic-name : emps
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
+    com.memorynotfound: DEBUG
