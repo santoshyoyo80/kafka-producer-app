@@ -7,8 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.kafka.annotation.EnableKafka;
 
+
+@EnableEurekaServer
 @SpringBootApplication
 @EnableKafka
 public class Application implements CommandLineRunner{
@@ -23,7 +26,6 @@ public class Application implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		String topicName = "emps";
 		Employee e = new Employee();
 		e.setEmailId("santosh@gmail.com");
 		e.setEmpId(100);
@@ -31,7 +33,8 @@ public class Application implements CommandLineRunner{
 		e.setLastName("kumar");
 		e.setPassword("qwerty16868");
 		String payload = mapper.writeValueAsString(e);
-		System.out.println("Writing payload to the kafka broker.");
 		producerService.send(payload);
 	}
+
+
 }

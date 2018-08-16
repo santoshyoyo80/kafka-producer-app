@@ -1,10 +1,17 @@
 spring:
   kafka:
     bootstrap-servers : localhost:9092
-
     topic-name : emps
-logging:
-  level:
-    root: INFO
-    org.springframework.web: ERROR
-    com.memorynotfound: DEBUG
+  application:
+      name: discover-server
+server:
+    port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

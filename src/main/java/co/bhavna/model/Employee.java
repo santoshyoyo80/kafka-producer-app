@@ -1,6 +1,8 @@
 package co.bhavna.model;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable{
     private Integer empId;
     private String firstName;
     private String lastName;
@@ -56,5 +58,16 @@ public class Employee {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
