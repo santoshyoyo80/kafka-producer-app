@@ -21,8 +21,8 @@ public class ProducerServiceImpl implements ProducerService {
 
     @Override
     public void send(String payload) {
-        LOGGER.info("Kafka Payload {} "+payload);
+        LOGGER.info("Topic Name {}, Kafka Payload {} ", topicName,payload);
         kafkaTemplate.send(topicName,payload);
-        LOGGER.info("Payload Sent Successfully.");
+        LOGGER.info("Payload Sent to the Kafka Topic Successfully.");
     }
 }
