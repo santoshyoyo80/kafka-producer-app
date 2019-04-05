@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers : localhost:9092
+    bootstrap-servers : localhost:9093
     topic-name : emps
   application:
       name: discover-server

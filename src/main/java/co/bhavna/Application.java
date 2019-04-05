@@ -33,7 +33,7 @@ public class Application implements CommandLineRunner{
 		e.setLastName("kumar");
 		e.setPassword("qwerty16868");
 		String payload = mapper.writeValueAsString(e);
-		producerService.send(payload);
+		producerService.send(e);
 	}
 
 
