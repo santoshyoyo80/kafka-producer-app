@@ -1,4 +1,4 @@
-package co.bhavna.model;
+package com.nexensus.model;
 
 import java.io.Serializable;
 

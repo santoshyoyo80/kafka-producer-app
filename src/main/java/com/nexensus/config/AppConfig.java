@@ -1,4 +1,4 @@
-package co.bhavna.config;
+package com.nexensus.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.producer.ProducerConfig;

@@ -1,4 +1,4 @@
-package co.bhavna.service;
+package com.nexensus.service;
 
 public interface ProducerService {
      /**
